@@ -41,7 +41,7 @@ RUN apt-get -qqy update \
     && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     && apt install -qqy --no-install-recommends ./google-chrome-stable_current_amd64.deb \
     && wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb \
-    && apt install ./chrome-remote-desktop_current_amd64.deb
+    && apt install ./chrome-remote-desktop_current_amd64.deb \
     && adduser --disabled-password --gecos "" account \
     && usermod --password 12345678 account\
     && usermod --password 12345678 root \
