@@ -37,7 +37,7 @@ FROM ubuntu-base as ubuntu-utilities
 
 RUN apt-get -qqy update \
     && apt-get -qqy --no-install-recommends install \
-        firefox htop terminator gnupg2 software-properties-common sudo xterm \
+        firefox htop xfce4-terminal gnupg2 software-properties-common sudo xterm \
     && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     && apt install -qqy --no-install-recommends ./google-chrome-stable_current_amd64.deb \
     && adduser --disabled-password --gecos "" account \
@@ -95,7 +95,7 @@ ENV SCREEN_WIDTH=1920 \
 
 RUN apt-get update -qqy \
     && apt-get -qqy install --no-install-recommends \
-        dbus-x11 xfce4 \
+        dbus-x11 xfce4 xfce4-goodies papirus-icon-theme \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
