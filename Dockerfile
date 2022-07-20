@@ -46,9 +46,8 @@ RUN apt-get -qqy update \
     && apt-add-repository ppa:remmina-ppa-team/remmina-next \
     && apt update \
     && apt install -qqy --no-install-recommends remmina remmina-plugin-rdp remmina-plugin-secret \
-    && apt-add-repository ppa:obsproject/obs-studio \
     && apt update \
-    && apt install -qqy --no-install-recommends obs-studio \
+    && apt install -qqy --no-install-recommends firefox \
     && apt install unzip \
     && apt -qqy install hwloc \
     && apt -qqy install nano \
@@ -81,8 +80,8 @@ RUN apt-get -qqy update \
 #============================
 FROM ubuntu-utilities as ubuntu-ui
 
-ENV SCREEN_WIDTH=1920 \
-    SCREEN_HEIGHT=1080 \
+ENV SCREEN_WIDTH=1366 \
+    SCREEN_HEIGHT=768 \
     SCREEN_DEPTH=24 \
     SCREEN_DPI=96 \
     DISPLAY=:99 \
